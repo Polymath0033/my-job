@@ -1,0 +1,14 @@
+.button {
+    background-color: var(--primary);
+    color: #fff;
+    padding: 0.4rem 1.8rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    font-family: var(--poppins);
+    text-transform: capitalize;
+    font-size: 1rem;
+    text-align: center;
+}

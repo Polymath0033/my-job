@@ -1,0 +1,124 @@
+.header {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: var(--light);
+    z-index: 2;
+}
+
+.tab {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.head {
+    display: flex;
+    gap: 1rem;
+}
+
+.tab div {
+    width: 30px;
+    height: 4px;
+    background-color: var(--primary);
+    margin: 3px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo h2 {
+    font-family: var(--job) !important;
+    color: var(--primary);
+    margin-left: 0.3rem;
+}
+
+.logo img {
+    width: 50px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.profile div {
+    display: grid;
+    margin-left: 0.8rem;
+}
+
+.profile h2 {
+    color: var(--primary);
+}
+
+.profile p {
+    font-weight: bold;
+    margin-left: 0.3rem;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.nav li {
+    font-weight: bold;
+    font-family: var(--poppins);
+    padding: 0.5rem;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #272727;
+}
+
+.nav div {
+    display: flex;
+    align-items: center;
+}
+
+a:hover,
+a.active {
+    color: var(--primary);
+}
+
+@media screen and (max-width: 870px) {
+    .header {
+        padding: 1rem 0.5rem;
+    }
+    .nav {
+        gap: 0.5rem;
+    }
+    .nav li {
+        padding: 0.3rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .header {
+        padding: 1rem;
+    }
+    .tab div {
+        width: 25px;
+    }
+}

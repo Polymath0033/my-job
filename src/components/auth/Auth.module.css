@@ -1,0 +1,145 @@
+.auth {
+  display: grid;
+  gap: 1.5rem;
+  padding: 0.8rem;
+}
+
+.login h2 {
+  margin-left: 1rem;
+  color: #424242;
+}
+
+.remember-me,
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--poppins);
+  color: #222222;
+}
+
+.remember-me h3 {
+  display: flex;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+}
+
+.remember-me input {
+  appearance: none;
+  background-color: #f2f2f2;
+  border: 0.75px solid rgba(0, 0, 0, 0.3);
+  width: 20px;
+  height: 20px;
+  border-radius: 2px;
+  display: flex;
+  color: #fff;
+  margin-top: -0.4rem;
+}
+
+.auth button {
+  padding: 0.7rem;
+  font-weight: 400;
+}
+
+.remember-me input:checked {
+  appearance: auto;
+}
+
+.or {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.or h3 {
+  position: relative;
+  width: 100%;
+  z-index: 100;
+  overflow: hidden;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.or h3::after,
+.or h3::before {
+  position: absolute;
+  content: "";
+  width: 40%;
+  height: 3px;
+  background-color: var(--light);
+  top: 50%;
+  z-index: 10000000000000;
+}
+
+.or h3::after {
+  right: 10px;
+}
+
+.or h3::before {
+  left: 10px;
+}
+
+.bottom {
+  width: 100%;
+}
+
+.bottom h3 {
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+.bottom h3:last-child {
+  color: var(--primary);
+  cursor: pointer;
+}
+
+.bottom a,
+.remember-me a {
+  all: unset;
+  color: var(--primary);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 610px) {
+  .or h::after,
+  .or h3::before {
+    width: 35%;
+  }
+}
+
+.pass {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: auto auto;
+  width: 100%;
+}
+
+.login {
+  padding: 0.5rem;
+  width: 100%;
+  padding-bottom: 4rem;
+}
+
+.form-control label {
+  display: flex;
+  margin-bottom: 0.5rem;
+  color: #8b8b8b;
+}
+
+@media screen and (min-width: 600px) {
+  .login {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .login {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pass {
+    grid-template-columns: 100%;
+  }
+}

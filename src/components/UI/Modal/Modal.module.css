@@ -1,0 +1,48 @@
+.backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.dialog {
+  position: fixed;
+  top: 20vh;
+  /* left: 10%; */
+  z-index: 100;
+  width: 60%;
+  border: none;
+  border-radius: 6px;
+  border-top: 18px solid var(--primary);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.head h1 {
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: #323232;
+}
+
+.head h1:last-of-type {
+  color: #af6363;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+  .dialog {
+    /* left: calc(50% - 20rem); */
+    width: calc(95% - 10px);
+  }
+}

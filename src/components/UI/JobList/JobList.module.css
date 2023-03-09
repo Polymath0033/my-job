@@ -1,0 +1,336 @@
+* {
+    font-family: var(--poppins);
+}
+
+.ul {
+    margin: 1rem 3rem;
+    padding: 0;
+    list-style: none;
+    margin-top: 2rem;
+}
+
+.ul:last-of-type {
+    margin-bottom: 10rem;
+}
+
+.ul>li {
+    border: 1px solid #f5f5f5;
+    border-radius: 5px;
+    display: grid;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.head,
+.bottom {
+    padding: 1rem;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.head div h3 {
+    color: var(--primary);
+    font-weight: bold;
+    /* margin-bottom: 0.5rem; */
+    text-transform: capitalize;
+}
+
+.head div div {
+    display: flex;
+    color: #666666;
+    padding: 0;
+}
+
+.head div p {
+    padding-right: 1rem;
+}
+
+.location {
+    position: relative;
+}
+
+.location+p {
+    padding-left: 1rem;
+}
+
+.location::after {
+    content: "";
+    position: absolute;
+    height: 16px;
+    width: 2px;
+    right: 0;
+    top: 7px;
+    background-color: #666666;
+}
+
+.head .inner-ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.head .inner-ul li {
+    padding: 0.3rem;
+    color: #666666;
+}
+
+.head .inner-ul li:first-child {
+    padding-left: 0;
+}
+
+.head address {
+    font-style: normal;
+}
+
+.head address h4 {
+    color: #454545;
+    text-transform: capitalize;
+}
+
+.head address span {
+    color: #666666;
+}
+
+.head {
+    border-bottom: 1px solid #666666;
+}
+
+.bottom {
+    display: flex;
+    gap: 1rem;
+}
+
+.head img {
+    display: none;
+}
+
+.ul>li img {
+    width: 110px;
+    height: 110px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.bottom summary {
+    padding-left: 1rem;
+    /* line-height: 1.7; */
+}
+
+.summary h4 {
+    color: var(--primary);
+}
+
+.summary p {
+    color: #666666;
+}
+
+.bottom-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.description-list {
+    display: grid;
+    margin-left: 2rem;
+}
+
+.description-list div {
+    position: relative;
+    display: flex;
+    gap: 1rem;
+}
+
+.description-list div::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border: 1px solid #454545;
+    display: flex;
+    align-items: center;
+    background-color: #454545;
+    border-radius: 50%;
+    position: absolute;
+    top: 8px;
+    margin-left: -1rem;
+}
+
+.description-list dt {
+    color: #454545;
+    font-weight: bold;
+    padding-right: 0.4rem;
+    text-transform: capitalize;
+}
+
+.description-list dd {
+    color: #666666;
+    padding-left: 0.4rem;
+}
+
+.share {
+    display: flex;
+    gap: 1.5rem;
+    height: 40px;
+    align-items: center;
+}
+
+.share button {
+    font-weight: 100;
+}
+
+.share i {
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 800px) {
+    .ul:last-of-type {
+        margin-bottom: 8rem;
+    }
+    .head div h3 {
+        font-size: 1.1rem;
+    }
+    .inner-ul li {
+        font-size: 12px;
+    }
+    .head div p,
+    .description-list dt,
+    .description-list dd {
+        font-size: 12px;
+    }
+    .head address h4,
+    .summary h4,
+    .summary p {
+        font-size: 14px;
+    }
+    .head address h4 {
+        line-height: 1;
+    }
+    .head address span {
+        font-size: 12px;
+    }
+    .summary p {
+        line-height: 1.5;
+        margin-bottom: 0.2rem;
+        margin-top: 0.2rem;
+    }
+    .description-list div {
+        gap: 0;
+        margin-left: -0.7rem;
+    }
+    .description-list div::before {
+        top: 5px;
+    }
+    .description-list dt,
+    .share {
+        gap: 1rem;
+    }
+    .share i {
+        margin: auto 0;
+        font-size: 1rem;
+    }
+    .location::after {
+        top: 4px;
+        height: 10px;
+    }
+}
+
+@media screen and (max-width: 790px) {
+    .ul:last-of-type {
+        margin-bottom: 3rem;
+    }
+}
+
+@media screen and (max-width: 710px) {
+    .share button {
+        padding: 0.3rem;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .ul {
+        margin: 1rem 1rem;
+    }
+    .inner-ul li {
+        padding: 0.1rem;
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .ul {
+        margin: 1rem;
+    }
+    .head {
+        display: grid;
+        grid-template-columns: 30% 62%;
+        gap: 0;
+    }
+    .head div p,
+    .description-list dt,
+    .description-list dd {
+        font-size: 1rem;
+    }
+    .ul>li img {
+        display: block;
+        width: 100%;
+        height: 135px;
+    }
+    .bottom img {
+        display: none;
+    }
+    .head address {
+        grid-column: 1 / span 2;
+        display: flex;
+    }
+    .head div h3 {
+        font-size: 1.7rem;
+    }
+    .head address h4 {
+        padding-right: 0.8rem;
+    }
+    .inner-ul {
+        flex-direction: column;
+        font-size: 16px;
+    }
+    .inner-ul li {
+        font-size: 13px;
+        line-height: 1;
+    }
+    .location::after {
+        height: 14px;
+    }
+    .bottom-details {
+        display: grid;
+        justify-content: inherit;
+        padding: 0 1rem;
+    }
+    .description-list div {
+        justify-content: space-between;
+    }
+    .share {
+        justify-content: flex-end;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    .bottom-details {
+        padding: 0;
+    }
+    .head div h3 {
+        font-size: 1.2rem;
+    }
+    .head {
+        gap: 1rem;
+    }
+    .head address h4 {
+        padding-right: 0.3rem;
+    }
+}
